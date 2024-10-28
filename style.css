@@ -53,12 +53,49 @@ a:hover{
     font-size: medium;
     margin: auto;
     padding: 2px;
-    border: solid black, 1px;
     color: whitesmoke;
 }
 .btn1 p{
     color: blanchedalmond;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     text-decoration: none;
-    /*display: none;*/
+    border: solid black, 1px;
+    display: none;
+    text-align:start;
+    font-size: medium;
+    margin: auto;
+    padding: auto;
+}
+h3{
+    text-align: center;
+    margin: 2px;
+    padding: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin: 5px;
+    padding: 1px;
+}
+.radio-c {
+    flex: 1;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: black;
+    margin: 5px;
+    text-align: left;
+}
+.smbtn{
+    margin-right: 15px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    border-radius: 2px;
 }

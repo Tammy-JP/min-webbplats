@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $('.btn1').click(function(){
+        $('.btn1 p').slideToggle("slow");
+    });
     $('.btn1 p').on({
         mouseenter: function(){
             $(this).css('background-color',"green");
@@ -6,6 +9,14 @@ $(document).ready(function(){
         mouseleave: function(){
             $(this).css('background-color',"#003366")
         }
+    });
+    $('#submitbtn').click(function(){
+        const utValue = $('input[name="1"]:checked').val() || "Ingen val";
+        const valValue = $('input[name="Val"]:checked').val() || "Ingen val";
+        const CSNValue = $('input[name="CSN"]:checked').val() || "Ingen val";
+        console.log("Utbildning:", utValue);
+        console.log("Studietak:", valValue);
+        console.log("CSN", CSNValue);
     });
 });
 
