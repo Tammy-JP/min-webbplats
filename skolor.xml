@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skolor>
+    <skola>
+        <namn>Jensen gymnasium Norra</namn>
+        <typ>Gymnasium</typ>
+    </skola>
+    <skola>
+        <namn>Jensen gymnasium Teknik</namn>
+        <typ>Gymnasium</typ>
+    </skola>
+    <skola>
+        <namn>Jensen komvux Stockholm</namn>
+        <typ>Komvux</typ>
+    </skola>
+    <skola>
+        <namn>Jensen grundskola Stockholm</namn>
+        <typ>Grundskola</typ>
+    </skola>
+    <skola>
+        <namn>Jensen vuxenutbildning</namn>
+        <typ>Vuxenutbildning</typ>
+    </skola>
+    <skola>
+        <namn>Jensen högskolan</namn>
+        <typ>högskolan</typ>
+    </skola>
+</skolor>

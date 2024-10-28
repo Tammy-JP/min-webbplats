@@ -20,6 +20,24 @@ $(document).ready(function(){
     });
 });
 
+function taxml(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET','skolor.xml',true);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4 && xhr.status === 200){
+            const xml = xhr.responseXML;
+            const skolor = xml.getElementsByTagName('skola');
+            let output = '';
+            for(let i =0; i < skolor.length; i++){
+                const namn = skolor[i].getElementsByTagName('namn')[0].textContent;
+                output += `<p>${namn}</p>`
+            }
+            document.getElementById('output').innerHTML = output;
+        }
+    };
+    xhr.send();
+}
+window.onload = taxml;
 
 function validateForm(){
     var name = document.getElementById("name");

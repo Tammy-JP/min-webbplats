@@ -90,6 +90,7 @@ h3{
     color: black;
     margin: 5px;
     text-align: left;
+    max-height: fit-content;
 }
 .smbtn{
     margin-right: 15px;
@@ -98,4 +99,8 @@ h3{
     cursor: pointer;
     float: right;
     border-radius: 2px;
+}
+#output{
+    font-size: xx-small;
+    margin: 0px;
 }
