@@ -1,3 +1,15 @@
+$(document).ready(function(){
+    $('.btn1 p').on({
+        mouseenter: function(){
+            $(this).css('background-color',"green");
+        },
+        mouseleave: function(){
+            $(this).css('background-color',"#003366")
+        }
+    });
+});
+
+
 function validateForm(){
     var name = document.getElementById("name");
     var email = document.getElementById("email");

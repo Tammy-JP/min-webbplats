@@ -1,4 +1,64 @@
-body {
-    font-family: Arial, Helvetica, sans-seri;
+body{
     margin: auto;
+    background-color: #003366;
+    color: #009933;
+}
+.homepage{
+    padding: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: center;
+    color: whitesmoke;
+    border: solid black,1px; 
+}
+.navbar{
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+    display: flex;
+    border: solid black , 1px;
+    font-size: large;
+    background-color: lightsteelblue;
+}
+a{
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    color: darkslateblue;
+    text-decoration-line: none; 
+    font-size: large; 
+    font-family: Arial, Helvetica, sans-serif
+}
+a:hover{
+    color: #093;
+    font-size: large;
+    text-decoration-line: underline;
+}
+*{
+    box-sizing: border-box;
+}
+.foot{
+    font-size: xx-small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gray;
+    text-decoration: none;
+    text-align: center;
+    padding: 3rem;
+    margin: 1px;
+}
+.btn1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    margin: auto;
+    padding: 2px;
+    border: solid black, 1px;
+    color: whitesmoke;
+}
+.btn1 p{
+    color: blanchedalmond;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    /*display: none;*/
 }
