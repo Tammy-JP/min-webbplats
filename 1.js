@@ -30,6 +30,49 @@ $(document).ready(function(){
     $('#dmode').on('click', function(){
         $('body').toggleClass('theme2');
     });
+    $('#kontaktbtn').on('click', function() {
+        visa();
+    });
+    function visa() {
+        var name = $('#name').val().trim();
+        var email = $('#email').val().trim();
+        var telefon = $('#tlnm').val().trim();
+        var message = $('#message').val().trim();
+        var errorMessage = "";
+
+        if (name === "") {
+            errorMessage += "Vänligen fyll i ditt namn.\n";
+        }
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            errorMessage += "Vänligen ange en giltig e-postadress.\n";
+        }
+
+        if (message === "") {
+            errorMessage += "Vänligen ange ett meddelande.\n";
+        }
+
+        if (telefon === "") {
+            errorMessage += "Vänligen ange ditt telefonnummer.\n";
+        } else if (isNaN(telefon)) {
+            errorMessage += "Telefonnumret måste vara ett nummer.\n";
+        }
+
+        if (errorMessage !== "") {
+            $('#visameddelande').text(errorMessage);
+            return false;
+        } else {
+            $('#visameddelande').text("Tack för ditt meddelande, " + name + "\n" +
+                "Din e-post: " + email + "\n" +
+                "Ditt telefonnummer: " + telefon + "\n" +
+                "Ditt meddelande: " + message);
+            $('#name').val('');
+            $('#email').val('');
+            $('#tlnm').val('');
+            $('#message').val('');
+        }
+    }
 });
 
 function taxml(){
@@ -50,24 +93,3 @@ function taxml(){
     xhr.send();
 }
 window.onload = taxml;
-
-function validateForm(){
-    var name = document.getElementById("name");
-    var email = document.getElementById("email");
-    var message = document.getElementById("message");
-    var errorMessage = "";
-    if (name.value ===""){
-        errorMessage += "Vänligen fyll i ditt namn.\n";
-    }
-    var emailRegex =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email.value)){
-        errorMessage += "Vänligen ange en giltig e-postadress.\n";
-    }
-    if (message.value === ""){
-        errorMessage += "Vänligen ange ett meddelande.";
-    }
-    if (errorMessage !==""){
-        alert(errorMessage);
-        return false;
-    }
-}
