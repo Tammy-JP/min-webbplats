@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    $('.btn1').click(function(){
-        $('.btn1 p').slideToggle("slow");
+    $('#btn1').click(function(){
+        $('#btn1 p').slideToggle("slow");
     });
-    $('.btn1 p').on({
+    $('#btn1 p').on({
         mouseenter: function(){
             $(this).css('background-color',"green");
         },
@@ -17,6 +17,9 @@ $(document).ready(function(){
         console.log("Utbildning:", utValue);
         console.log("Studietak:", valValue);
         console.log("CSN", CSNValue);
+    });
+    $('#dmode').on('click', function(){
+        $('body').toggleClass('theme2');
     });
 });
 
