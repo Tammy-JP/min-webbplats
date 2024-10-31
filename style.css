@@ -140,6 +140,13 @@ h3{
     margin: 5px;
     padding: 1px;
 }
+#csnlogocss{
+    border-radius: solid black, 5px;
+    width: 30px;
+    height: auto;
+    justify-items: right;
+    display:flex;
+}
 @media screen and (max-width: 700px){ 
     .navbar, .main, .radio-c, #dmode, #meddelande, #visameddelande{
         flex-direction: column;}
