@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    $('#btn1').click(function(){
-        $('#btn1 p').slideToggle("slow");
+    $('.btn1').click(function(){
+        $('.btn1 p').slideToggle("slow");
     });
-    $('#btn1 p').on({
+    $('.btn1 p').on({
         mouseenter: function(){
             $(this).css('background-color',"green");
         },
@@ -11,12 +11,21 @@ $(document).ready(function(){
         }
     });
     $('#submitbtn').click(function(){
-        const utValue = $('input[name="1"]:checked').val() || "Ingen val";
-        const valValue = $('input[name="Val"]:checked').val() || "Ingen val";
-        const CSNValue = $('input[name="CSN"]:checked').val() || "Ingen val";
+        const utValue = $('input[name="1"]:checked').val() || "Ingen";
+        const valValue = $('input[name="Val"]:checked').val() || "Ingen";
+        const CSNValue = $('input[name="CSN"]:checked').val() || "Ingen";
+        var skolanlist = $('#textinput').val().trim();
+        if (skolanlist !==''){
+            var message = `Du valde utbildning för ${utValue}. Studietak för: ${valValue}.Du ska söker till CSN: ${CSNValue}. Du valde ${skolanlist}.`
+            $('#meddelande').text(message);
+            $('#textinput').val('');
+        } else {
+            alert('Vänligen ange ditt namn.');
+        }
         console.log("Utbildning:", utValue);
         console.log("Studietak:", valValue);
         console.log("CSN", CSNValue);
+        console.log("Skolanlist",skolanlist);
     });
     $('#dmode').on('click', function(){
         $('body').toggleClass('theme2');
